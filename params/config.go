@@ -245,7 +245,7 @@ var (
 
 	// used to test hard fork upgrade, following https://github.com/bnb-chain/bsc-genesis-contract/blob/master/genesis.json
 	RialtoChainConfig = &ChainConfig{
-		ChainID:             big.NewInt(714),
+		ChainID:             big.NewInt(988),
 		HomesteadBlock:      big.NewInt(0),
 		EIP150Block:         big.NewInt(0),
 		EIP155Block:         big.NewInt(0),
@@ -410,7 +410,7 @@ var (
 		VerkleTime:              nil,
 		TerminalTotalDifficulty: big.NewInt(math.MaxInt64),
 		Ethash:                  nil,
-		Clique:                  &CliqueConfig{Period: 0, Epoch: 30000},
+		Clique:                  &CliqueConfig{Period: 3, Epoch: 30000},
 	}
 
 	// TestChainConfig contains every protocol change (EIPs) introduced
@@ -548,8 +548,8 @@ var (
 
 // NetworkNames are user friendly names to use in the chain spec banner.
 var NetworkNames = map[string]string{
-	MainnetChainConfig.ChainID.String(): "mainnet",
-	BSCChainConfig.ChainID.String():     "bsc",
+	MainnetChainConfig.ChainID.String(): "testnet",
+	BSCChainConfig.ChainID.String():     "crd",
 	ChapelChainConfig.ChainID.String():  "chapel",
 	RialtoChainConfig.ChainID.String():  "rialto",
 }
